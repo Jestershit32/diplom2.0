@@ -1,4 +1,17 @@
+$dark-color: #3b2667;
+$middle-color: #eb5254;
+$light-color: #fff;
 
-.Header{
+.Header {
+	background-color: $light-color;
 	width: 100%;
+	padding: 60px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	position: relative;
+	& img {
+		width: 50px;
+	}
 }

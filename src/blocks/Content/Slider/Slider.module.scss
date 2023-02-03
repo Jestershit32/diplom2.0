@@ -1,0 +1,36 @@
+$dark-color: #3b2667;
+$middle-color: #eb5254;
+$light-color: #fff;
+
+@mixin font {
+	font-family: "Roboto", sans-serif;
+	color: $light-color;
+	font-size: 24px;
+}
+
+.Slider {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.item {
+	border-radius: 10px;
+	@include font;
+	text-align: center;
+	padding: 5px;
+	min-width: 40px;
+	height: 40px;
+	background-color: $dark-color;
+	border: none;
+	&__last {
+		margin-left: 10px;
+	}
+	&__first {
+		margin-right: 10px;
+	}
+	&:hover {
+		border: 2px solid $light-color;
+		cursor: pointer;
+	}
+}
