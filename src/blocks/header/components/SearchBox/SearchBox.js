@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./SearchBox.module.scss"
 
 
-export const SearchBox = (props) => {
+export const SearchBox = () => {
 	const [searchValue, setSearchValue] = useState("");
 
 
@@ -13,16 +13,36 @@ export const SearchBox = (props) => {
 			alert(searchValue)
 		}
 	}
-	function stylefiltBtn(bool) {
-		return bool ? styles.FilterCheck__on : ''
+
+	function enterClick(event) {
+		if (event.key === "Enter") {
+			return searchClick();
+		};
 	}
 
+	function ChangeSearch(event) {
+
+		setSearchValue(event.target.value)
+	}
 
 	return (
-		<div className={styles.SearchBox}>
-			<input className={[styles.FilterCheck + " " + stylefiltBtn(props.statusFilter)]} type="button" onClick={props.statuser} value="Фильтр" />
-			<input className={styles.SearchInput} type="text" placeholder="Поиск" onChange={e => setSearchValue(e.target.value)} value={searchValue} />
-			<input className={styles.SearchBtn} type="button" onClick={searchClick} value="Поиск" />
-		</div>
+		<label htmlFor="search" className={styles.SearchBox}>
+			<input
+				className={styles.SearchInput}
+				type="text"
+				placeholder="Поиск"
+				onChange={ChangeSearch}
+				value={searchValue}
+				onKeyDown={enterClick}
+			/>
+
+			<input
+				id="search"
+				className={styles.SearchBtn}
+				type="button"
+				onClick={searchClick}
+				value="Поиск"
+			/>
+		</label>
 	)
 }

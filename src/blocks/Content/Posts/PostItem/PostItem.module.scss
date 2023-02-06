@@ -1,0 +1,65 @@
+$dark-color: #3b2667;
+$middle-color: #eb5254;
+$light-color: #fff;
+@mixin font {
+	font-family: "Roboto", sans-serif;
+	color: $light-color;
+	font-size: 16px;
+}
+
+.PostItem {
+	@include font;
+	display: flex;
+	justify-content: space-between;
+	padding: 25px;
+	border-radius: 20px;
+	width: 100%;
+	min-height: 100px;
+	max-height: 210px;
+	height: 100%;
+	background-color: #3b2667;
+}
+.Info {
+	position: relative;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
+}
+.Panel {
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 10px;
+}
+.PanelBtn {
+	@include font;
+	background-color: $middle-color;
+	white-space: break-spaces;
+	border-radius: 20px;
+	height: 80px;
+	&:hover {
+		border: 2px solid $light-color;
+	}
+	&:active {
+		opacity: 0.9;
+	}
+}
+.P {
+	padding-right: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 90px;
+}
+.A {
+	color: inherit;
+}
+.H1 {
+	margin: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+}
