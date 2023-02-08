@@ -36,6 +36,7 @@ $light-color: #fff;
 }
 .PanelBtn {
 	@include font;
+	width: 100%;
 	background-color: $middle-color;
 	white-space: break-spaces;
 	border-radius: 20px;

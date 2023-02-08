@@ -1,18 +1,24 @@
-import { Header } from "./blocks/header/header.js"
-// import { Content } from "./blocks/Content/Content.js";
+
 import 'normalize.css';
-import { PostPage } from "./blocks/PostPage/PostPage";
+import { Route, Routes } from "react-router-dom";
+import { PostPageId } from './pages/PostPageId.js';
+import { SinglePage } from "./pages/SinglePage.js";
+
 
 
 
 function App() {
   return (
     <>
-      <Header />
-      {/* <Content /> */}
-      <PostPage />
+      <Routes>
+        <Route path="/" element={<SinglePage />} />
+        <Route path="/page/:id" element={<PostPageId />} />
+      </Routes>
     </>
   );
 }
+
+
+
 
 export default App;

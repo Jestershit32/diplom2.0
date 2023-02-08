@@ -22,19 +22,10 @@ $light-color: #fff;
 	}
 }
 .SearchInput {
-	width: 400px;
 	padding: 10px 20px;
 	border: 3px solid $dark-color;
 	border-radius: 10px 0px 0px 10px;
 	@include font;
-	&:focus {
-		background-color: $dark-color;
-		color: $light-color;
-
-		&::placeholder {
-			color: $dark-color;
-		}
-	}
 }
 .FilterCheck {
 	background-color: $light-color;
@@ -51,5 +42,21 @@ $light-color: #fff;
 		width: 200px;
 		border: none;
 		height: 40px;
+	}
+}
+
+@media (width<=800px) {
+	.SearchInput {
+		border: none;
+		width: 200px;
+		padding: 5px 10px;
+		border-radius: 0px;
+		border-bottom: 2px solid $dark-color;
+		&:focus {
+			border: none;
+		}
+	}
+	.SearchBtn {
+		display: none;
 	}
 }

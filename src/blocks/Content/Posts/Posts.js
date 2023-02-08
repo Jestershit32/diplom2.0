@@ -2,18 +2,15 @@
 import styles from "./Posts.module.scss"
 import { PostItem } from "./PostItem/PostItem"
 
-export const Posts = () => {
+export const Posts = ({ currentItems }) => {
+
+
+
+
+
 	return (
 		<div className={styles.Posts}>
-			<PostItem />
-			<PostItem />
-			<PostItem />
-			<PostItem />
-			<PostItem />
-			<PostItem />
-			<PostItem />
-			<PostItem />
-			<PostItem />
+			{currentItems.map((item, key) => <PostItem item={item} key={key} />)}
 		</div>
 	)
 }
