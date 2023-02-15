@@ -7,7 +7,7 @@ $light-color: #fff;
 	margin: 0px;
 	padding: 0px;
 	&::selection {
-		background-color: $middle-color;
+		background-color: rgba(115, 28, 197, 0.295);
 		color: black;
 	}
 }

@@ -13,9 +13,9 @@ $light-color: #fff;
 	border: 2px solid $light-color;
 	border-radius: 20px;
 	cursor: pointer;
+
 	&:hover {
 		opacity: 0.8;
-		border: 2px solid $dark-color;
 	}
 	&:active {
 		background-color: $middle-color;

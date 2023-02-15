@@ -8,47 +8,23 @@ $light-color: #fff;
 }
 
 .SearchBox {
+	width: 70%;
 	display: flex;
-	align-items: stretch;
-}
-.SearchBtn {
-	background-color: $dark-color;
-	@include font;
-	color: $light-color;
-	width: 100px;
-	border-radius: 0px 10px 10px 0px;
-	&:hover {
-		color: gray;
-	}
+	align-items: center;
 }
 .SearchInput {
+	width: 100%;
+	text-align: center;
 	padding: 10px 20px;
 	border: 3px solid $dark-color;
-	border-radius: 10px 0px 0px 10px;
-	@include font;
-}
-.FilterCheck {
-	background-color: $light-color;
-	@include font;
-	width: 100px;
-	margin-right: 40px;
 	border-radius: 10px;
-	transition-duration: 1s;
-	&:hover {
-		color: gray;
-	}
-	&__on {
-		font-size: 36px;
-		width: 200px;
-		border: none;
-		height: 40px;
-	}
+	@include font;
 }
 
 @media (width<=800px) {
 	.SearchInput {
 		border: none;
-		width: 200px;
+		width: 100%;
 		padding: 5px 10px;
 		border-radius: 0px;
 		border-bottom: 2px solid $dark-color;

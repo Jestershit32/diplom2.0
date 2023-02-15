@@ -1,0 +1,73 @@
+$dark-color: #3b2667;
+$middle-color: #eb5254;
+$light-color: #fff;
+@mixin font {
+	font-family: "Roboto", sans-serif;
+	color: $dark-color;
+}
+
+.ProfileUser {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.image {
+	width: 200px;
+	height: 200px;
+	border-color: $dark-color;
+	border-radius: 20px;
+}
+.name {
+	font-size: 20px;
+	display: flex;
+	gap: 20px;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	@include font;
+	padding: 10px 20px;
+}
+.label {
+	margin-top: 20px;
+}
+.nickname {
+	font-size: 16px;
+
+	&::before {
+		content: "@";
+	}
+}
+.birthday {
+	margin-top: 10px;
+	display: flex;
+	gap: 2px;
+}
+
+.date {
+	&::after {
+		content: ".";
+	}
+}
+.option {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.button {
+	@include font;
+	color: $light-color;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: $dark-color;
+	&__red {
+		background-color: $middle-color;
+	}
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+}

@@ -1,0 +1,26 @@
+$dark-color: #3b2667;
+$middle-color: #eb5254;
+$light-color: #fff;
+
+@mixin font {
+	font-family: "Roboto", sans-serif;
+	color: $dark-color;
+}
+
+.NavBar {
+	display: flex;
+	width: 100%;
+	padding: 10px 100px;
+}
+.Item {
+	@include font;
+	list-style: none;
+	padding: 20px;
+	color: $light-color;
+	border-radius: 20px;
+	background-color: $dark-color;
+	&:hover {
+		opacity: 0.7;
+		cursor: pointer;
+	}
+}
