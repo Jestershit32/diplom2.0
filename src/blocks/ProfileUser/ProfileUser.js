@@ -1,9 +1,11 @@
 
 import styles from "./ProfileUser.module.scss"
+
 import { ProfileOtdels } from "./ProfileOtdels/ProfileOtdels"
 
 
 export const ProfileUser = ({ User }) => {
+
 	return (<>
 		<div className={styles.ProfileUser}>
 			<img className={styles.image} src={User.image ? User.image : ""} alt={User.image} />
@@ -27,7 +29,7 @@ export const ProfileUser = ({ User }) => {
 				<button className={styles.button}>Выйти из профиля</button>
 			</div>
 		</div>
-		<ProfileOtdels />
+		<ProfileOtdels userId={User._id} />
 	</>
 	)
 }
