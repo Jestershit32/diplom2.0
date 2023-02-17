@@ -22,9 +22,9 @@ export function ContextUser({ children }) {
         dataFetch();
 
     }, [UserInfoContext])
-    const userLogin = () => {
-        setUserInfoContext("info")
-    }
+    // const userLogin = () => {
+    //     setUserInfoContext("info")
+    // }
 
     // const userLogout = () => {
     //     setUserInfoContext('')

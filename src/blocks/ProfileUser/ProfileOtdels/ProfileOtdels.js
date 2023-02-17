@@ -7,15 +7,23 @@ import styles from "./ProfileOtdels.module.scss"
 export const ProfileOtdels = ({ userId }) => {
 	const [Otdel, setOtdel] = useState("publication");
 	const [isLoading, setLoading] = useState(true);
-	const posts = usePosts(userId)
+	const PublicationPosts = usePosts(userId)
 	function isActive(item) {
 		return Otdel === item ? ` ${styles.active}` : ''
 	}
 	useEffect(() => {
-		if (posts) {
+		if (PublicationPosts) {
 			setLoading(false)
 		}
-	}, [posts])
+	}, [PublicationPosts])
+
+	function tabOtdel() {
+		if (Otdel === "publication") {
+			return PublicationPosts
+		} else {
+			return []
+		}
+	}
 
 	return (
 		<>
@@ -23,8 +31,7 @@ export const ProfileOtdels = ({ userId }) => {
 				<button onClick={() => setOtdel("publication")} className={styles.button + isActive("publication")}>Опубликованное</button>
 				<button onClick={() => setOtdel("favorites")} className={styles.button + isActive("favorites")}>Избранное</button>
 			</div>
-			{isLoading ? '' : <Content posts={posts} />}
-
+			{isLoading ? '' : <Content posts={tabOtdel()} />}
 		</>
 	)
 }

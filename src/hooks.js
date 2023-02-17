@@ -16,7 +16,11 @@ export function useProfile(profileId) {
         };
         dataFetch();
     }, [profileId])
-    return (Profile);
+    if (Profile) {
+        return (Profile)
+    } else {
+        return ({})
+    }
 
 }
 export function usePosts(profileId) {
@@ -35,7 +39,11 @@ export function usePosts(profileId) {
         };
         dataFetch();
     }, [profileId])
-    return (Posts)
+    if (Posts) {
+        return (Posts)
+    } else {
+        return ([])
+    }
 }
 
 

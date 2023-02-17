@@ -12,14 +12,18 @@ export const Slider = ({ totalItems, ItemInPage, setPagPage, PagPage }) => {
 
 	}
 
-	return (
-		<div className={styles.Slider}>
-			<input type="button" onClick={() => setPagPage(1)} className={styles.item + " " + styles.item__first} value={'<<'} />
-			{
-				pageNumber.map((item, key) => <input key={key} type="button" onClick={() => setPagPage(item)} className={styles.item + isActiv(key)} value={item} />)
-			}
+	if (totalItems >= 10) {
+		return (
+			<div className={styles.Slider} >
+				<input type="button" onClick={() => setPagPage(1)} className={styles.item + " " + styles.item__first} value={'<<'} />
+				{
+					pageNumber.map((item, key) => <input key={key} type="button" onClick={() => setPagPage(item)} className={styles.item + isActiv(key)} value={item} />)
+				}
 
-			<input type="button" onClick={() => setPagPage(pageNumber.length)} className={styles.item + " " + styles.item__last} value={'>>'} />
-		</div>
-	)
+				<input type="button" onClick={() => setPagPage(pageNumber.length)} className={styles.item + " " + styles.item__last} value={'>>'} />
+			</div>
+		)
+	} else {
+		return ("");
+	}
 }

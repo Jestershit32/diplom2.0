@@ -1,0 +1,75 @@
+$dark-color: #3b2667;
+$middle-color: #eb5254;
+$light-color: #fff;
+@mixin font {
+	font-family: "Roboto", sans-serif;
+	color: $dark-color;
+}
+
+.Window {
+	margin: 20px auto;
+	max-width: fit-content;
+	min-width: 330px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	border: 2px solid $dark-color;
+	padding: 40px 30px;
+	gap: 15px;
+}
+
+.TextBar {
+	max-width: 300px;
+	width: 100%;
+	@include font;
+	display: flex;
+	flex-direction: column;
+}
+
+.TextName {
+	padding: 5px 10px;
+	font-size: 20px;
+}
+.Input {
+	font-display: inherit;
+	border-radius: 10px;
+	padding: 5px 10px;
+	border: 2px solid $dark-color;
+}
+.Button {
+	@include font;
+	max-width: 300px;
+	border-radius: 10px;
+	padding: 5px 10px;
+	width: 100%;
+	background-color: $dark-color;
+	color: $light-color;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.HSpan {
+	@include font;
+	font-size: 35px;
+	padding: 10px;
+	font-weight: 700;
+}
+
+.InputFile {
+	display: none;
+}
+.LabelFile {
+	text-align: center;
+	@include font;
+	max-width: 300px;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	background-color: $dark-color;
+	color: $light-color;
+	&:hover {
+		opacity: 0.8;
+	}
+}

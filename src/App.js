@@ -5,6 +5,7 @@ import { PostPageId } from './pages/PostPageId.js';
 import { ProfileUserPage } from './pages/ProfileUserPage.js';
 import { SinglePage } from "./pages/SinglePage.js";
 import { LoginPage } from './pages/LoginPage.js';
+import { WindowPage } from './pages/WindowPage.js'
 import { postOneLoader, postsLoader, userLoader } from "./loaders.js"
 
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/post/:id" element={<PostPageId />} loader={postOneLoader} />
     <Route path="/profile/:id" element={<ProfileUserPage />} loader={userLoader} />
     <Route path='/login' element={<LoginPage />} />
+    <Route path='/Window' element={<WindowPage />} />
   </>
 ))
 
